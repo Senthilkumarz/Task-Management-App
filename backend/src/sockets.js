@@ -1,0 +1,1 @@
+const { Server } = require('socket.io'); function setupSockets(server){ const io = new Server(server, { cors:{ origin:'*' } }); io.on('connection', socket=>{ console.log('socket connected', socket.id); socket.on('joinProject', id=>socket.join('project:'+id)); socket.on('leaveProject', id=>socket.leave('project:'+id)); }); return io; } module.exports = { setupSockets };

@@ -1,0 +1,1 @@
+const { User } = require('../models'); exports.listUsers = async (req,res)=>{ try{ const users = await User.findAll({ attributes:['id','name','email'] }); res.json(users); }catch(err){ console.error(err); res.status(500).json({ message: 'Server error' }); } };

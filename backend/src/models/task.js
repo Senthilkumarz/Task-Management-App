@@ -1,0 +1,1 @@
+module.exports = (sequelize, DataTypes) => sequelize.define('Task',{ id:{type:DataTypes.INTEGER,primaryKey:true,autoIncrement:true}, title:{type:DataTypes.STRING,allowNull:false}, description:DataTypes.TEXT, status:{type:DataTypes.ENUM('todo','in-progress','done'),defaultValue:'todo'}, dueDate:DataTypes.DATE },{timestamps:true});

@@ -1,0 +1,1 @@
+module.exports = (sequelize, DataTypes) => sequelize.define('Project',{ id:{type:DataTypes.INTEGER,primaryKey:true,autoIncrement:true}, title:{type:DataTypes.STRING,allowNull:false}, description:DataTypes.TEXT },{timestamps:true});
